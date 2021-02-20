@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jsvalle123/Second_Homework#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
     "tsparticles": "^1.18.12"
   }
 }

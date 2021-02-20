@@ -1,5 +1,6 @@
 'use strict';
 const express = require (`express`);
+const app = express();
 const expressHandlebars = require(`express-handlebars`);
 const tsParticles = require(`tsparticles`)
 
@@ -12,10 +13,7 @@ app.use(express.json());
 
 app.engine(`handlebars`, expressHandlebars({ defaultLayout: `main` }));
 app.set(`view engine`, `handlebars`);
-// immediately invoked function express
-require(`./routes/html-routes.js`)
-({ force: true }).then(() => {
+require("./routes/html-routes.js")(app);
   app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
   });
-});

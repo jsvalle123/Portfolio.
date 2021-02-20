@@ -1,22 +1,26 @@
-'use strict';
+var path = require("path");
 
-module.exports = (app) => {
-  app.get(`/`, (req, res) => {
-    if (req.user) {
-      res.redirect(`/aboutMe`);
-    }
+// Routes
+// =============================================================
+module.exports = function(app) {
 
-    app.get(`/aboutMe`, (req, res) => {
-      res.render(`aboutMe`);
-    });
+  // Each of the below routes just handles the HTML page that the user gets sent to.
 
-    // add is authenticated back at some point
-    app.get(`/contact`, (req, res) => {
-      res.render(`contact`);
-    });
-    // re-add isAuthenticated once working
-    app.get(`/portfolio`, (req, res) => {
-      res.render(`portfolio`);
-    });
+  // index route loads view.html
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/aboutMe.handlebars"));
   });
+
+  // cms route loads cms.html
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/contact.handlebars"));
+  });
+
+  // blog route loads blog.html
+  app.get("/portfolio", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/portfolio.handlebars"));
+  });
+
+
+
 };
