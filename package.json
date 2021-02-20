@@ -1,0 +1,23 @@
+{
+  "name": "second_homework",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsvalle123/Second_Homework.git"
+  },
+  "author": "jaimie valle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsvalle123/Second_Homework/issues"
+  },
+  "homepage": "https://github.com/jsvalle123/Second_Homework#readme",
+  "dependencies": {
+    "tsparticles": "^1.18.12"
+  }
+}
