@@ -10,10 +10,21 @@ app.use(express.static(`public`));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get('/', function (req, res) {
+    res.render('aboutMe');
+});
+app.get('/aboutMe', function (req, res) {
+  res.render('aboutMe');
+});
+app.get('/contact', function (req, res) {
+  res.render('contact');
+});
+app.get('/portfolio', function (req, res) {
+  res.render('portfolio');
+});
 
 app.engine(`handlebars`, expressHandlebars({ defaultLayout: `main` }));
 app.set(`view engine`, `handlebars`);
-require("./routes/html-routes.js")(app);
   app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
   });
