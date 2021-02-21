@@ -4,7 +4,6 @@
         }
 
         canvas {
-            display: block;
             vertical-align: bottom;
         }
 
@@ -13,7 +12,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: #323031;
+            background-color: #91abaf;
             background-image: url("");
             background-repeat: no-repeat;
             background-size: cover;
