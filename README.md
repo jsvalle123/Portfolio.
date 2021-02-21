@@ -8,7 +8,7 @@ AS a User you can get to know me and all the projects I've worked on. You also c
 None
 
 # Usage
-![README](../Second_Homework/Images/me.png)
+![README](./Images/me.png)
 Format: ![Alt Text](url)
 
 
